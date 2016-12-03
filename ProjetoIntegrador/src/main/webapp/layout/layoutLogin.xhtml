@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<h:outputStylesheet name="bootstrap.min.css" library="css" />
+	<h:outputStylesheet name="style.css" library="css" />
+
+	<h:outputScript value="jquery.min.js" library="js" />
+	<h:outputScript value="bootstrap.min.js" library="js" />
+	<h:outputScript value="scripts.js" library="js" />
+
+</h:head>
+
+<h:body>
+
+	<div id="site">
+
+		<div id="header">
+			<ui:insert name="header">
+				<ui:include src="/layout/headerIndex.xhtml" />
+			</ui:insert>
+		</div>
+
+		<div id="conteudo">
+
+			<ui:insert name="principal">
+				<ui:include src="/login.xhtml" />
+			</ui:insert>
+
+		</div>
+
+
+		<div id="footer">
+			<ui:insert name="footer">
+				<ui:include src="/layout/footerIndex.xhtml" />
+			</ui:insert>
+		</div>
+
+	</div>
+
+</h:body>
+</html>

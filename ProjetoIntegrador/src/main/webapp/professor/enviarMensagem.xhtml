@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="/layout/layout.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+
+	<ui:define name="principal">
+
+		<div class="conteudo">
+
+			<center>
+				<h1>Enviar mensagem</h1>
+				<br />
+				<h:form id="formEnviarAviso">
+					<f:event type="preRenderView"
+						listener="#{enviarAvisoController.iniciar}" />
+					<div class="form-group row" style="padding-top: 20px;">
+						<label for="funcionarioTelefone" class="col-xs-2 col-form-label">Aluno:</label>
+						<div class="col-xs-9">
+							<h:selectOneMenu styleClass="inputSelect"
+								value="#{enviarAvisoController.alunoSelecionado}">
+								<f:selectItems value="#{enviarAvisoController.itemsAlunos}" />
+							</h:selectOneMenu>
+						</div>
+					</div>
+
+					<h:inputTextarea value="#{enviarAvisoController.mensagem}"
+						styleClass="areaMensagem" />
+
+					<br />
+					<h:commandButton value="Enviar" styleClass="btnCadastrar"
+						action="#{enviarAvisoController.enviar}" />
+				</h:form>
+			</center>
+
+		</div>
+
+	</ui:define>
+</ui:composition>

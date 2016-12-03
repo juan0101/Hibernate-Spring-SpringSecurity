@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="/layout/layout.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+	<ui:define name="principal">
+
+
+		<div class="conteudo">
+			<center>
+				<h1>Cadastro de Aluno</h1>
+			</center>
+			<br />
+			<h:form id="formCadastroAluno">
+				<div class="form-group row">
+					<label for="alunoNome" class="col-xs-3 col-form-label">Nome</label>
+					<div class="col-xs-9">
+						<h:inputText styleClass="inputText" id="alunoNome"
+							value="#{cadastraAlunoController.nomeAluno}"
+							p:placeholder=" Digite o nome do aluno" />
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoNascimento" class="col-xs-3 col-form-label">Data
+						de nascimento</label>
+					<div class="col-xs-9">
+						<h:inputText styleClass="inputText" id="alunoNascimento"
+							value="#{cadastraAlunoController.dataNascimento}"
+							p:placeholder=" Digite a data de nascimento (Ex: DD/MM/AA)" />
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoTelefone" class="col-xs-3 col-form-label">Telefone</label>
+					<div class="col-xs-9">
+						<h:inputText styleClass="inputText" id="alunoTelefone"
+							value="#{cadastraAlunoController.telefoneAluno}"
+							p:placeholder=" Digite o telefone (Ex: 39514123)" />
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoEmail" class="col-xs-3 col-form-label">Email</label>
+					<div class="col-xs-9">
+						<h:inputText styleClass="inputText" id="alunoEmail"
+							value="#{cadastraAlunoController.emailAluno}"
+							p:placeholder=" Digite o email do aluno" />
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoRa" class="col-xs-3 col-form-label">RA</label>
+					<div class="col-xs-9">
+						<h:inputText styleClass="inputText" id="alunoRa"
+							value="#{cadastraAlunoController.ra}"
+							p:placeholder=" Digite o RA do aluno" />
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoPai" class="col-xs-3 col-form-label">Nome
+						do Pai</label>
+					<div class="col-xs-9">
+						<h:inputText styleClass="inputText" id="alunoPai"
+							value="#{cadastraAlunoController.nomePai}"
+							p:placeholder=" Digite o nome do pai do aluno" />
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoPaiTelefone" class="col-xs-3 col-form-label">Telefone
+						do Pai</label>
+					<div class="col-xs-9">
+						<h:inputText styleClass="inputText" id="alunoPaiTelefone"
+							value="#{cadastraAlunoController.telPai}"
+							p:placeholder=" Digite o telefone do pai do aluno" />
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoMae" class="col-xs-3 col-form-label">Nome
+						da Mãe</label>
+					<div class="col-xs-9">
+						<h:inputText styleClass="inputText" id="alunoMae"
+							value="#{cadastraAlunoController.nomeMae}"
+							p:placeholder=" Digite o nome da mãe do aluno" />
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoMaeTelefone" class="col-xs-3 col-form-label">Telefone
+						da Mãe</label>
+					<div class="col-xs-9">
+						<h:inputText styleClass="inputText" id="alunoMaeTelefone"
+							value="#{cadastraAlunoController.telMae}"
+							p:placeholder=" Digite o telefone da mãe do aluno" />
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoResponsavelEmail" class="col-xs-3 col-form-label">Email
+						do responsável</label>
+					<div class="col-xs-9">
+						<h:inputText styleClass="inputText" id="alunoResponsavelEmail"
+							value="#{cadastraAlunoController.emailResp}"
+							p:placeholder=" Digite o email de algum responsável pelo aluno" />
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoHorario" class="col-xs-3 col-form-label">Horário
+						de estudo</label>
+					<div class="col-xs-9">
+						<h:selectOneMenu styleClass="inputSelect"
+							value="#{cadastraAlunoController.horario}">
+							<f:selectItem itemValue="Matutino" itemLabel="Matutino" />
+							<f:selectItem itemValue="Vespertino" itemLabel="Vespertino" />
+							<f:selectItem itemValue="Noturno" itemLabel="Noturno" />
+							<f:selectItem itemValue="Integral" itemLabel="Integral" />
+						</h:selectOneMenu>
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoTurma" class="col-xs-3 col-form-label">Turma</label>
+					<div class="col-xs-9">
+						<h:selectOneMenu styleClass="inputSelect"
+							value="#{cadastraAlunoController.turma}">
+							<f:selectItem itemValue="A" itemLabel="A" />
+							<f:selectItem itemValue="B" itemLabel="B" />
+							<f:selectItem itemValue="C" itemLabel="C" />
+							<f:selectItem itemValue="D" itemLabel="D" />
+						</h:selectOneMenu>
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoTurma" class="col-xs-3 col-form-label">Série</label>
+					<div class="col-xs-9">
+						<h:selectOneMenu styleClass="inputSelect"
+							value="#{cadastraAlunoController.serie}">
+							<f:selectItem itemValue="6° Ano / 5ª Série - Ensino Fundamental"
+								itemLabel="6° Ano / 5ª Série - Ensino Fundamental" />
+							<f:selectItem itemValue="7° Ano / 6ª Série - Ensino Fundamental"
+								itemLabel="7° Ano / 6ª Série - Ensino Fundamental" />
+							<f:selectItem itemValue="8° Ano / 7ª Série - Ensino Fundamental"
+								itemLabel="8° Ano / 7ª Série - Ensino Fundamental" />
+							<f:selectItem itemValue="9° Ano / 8ª Série - Ensino Fundamental"
+								itemLabel="9° Ano / 8ª Série - Ensino Fundamental" />
+							<f:selectItem itemValue="1° Ano - Ensino Médio"
+								itemLabel="1° Ano - Ensino Médio" />
+							<f:selectItem itemValue="2° Ano - Ensino Médio"
+								itemLabel="2° Ano - Ensino Médio" />
+							<f:selectItem itemValue="3° Ano - Ensino Médio"
+								itemLabel="3° Ano - Ensino Médio" />
+						</h:selectOneMenu>
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoLogin" class="col-xs-3 col-form-label">Login
+						do Aluno</label>
+					<div class="col-xs-9">
+						<h:inputText styleClass="inputText" id="alunoLogin"
+							value="#{cadastraAlunoController.login}"
+							p:placeholder=" Digite um Login para o aluno" />
+					</div>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="alunoSenha" class="col-xs-3 col-form-label">Senha
+						do Aluno</label>
+					<div class="col-xs-9">
+						<h:inputSecret styleClass="inputText" id="alunoSenha"
+							value="#{cadastraAlunoController.senha}"
+							p:placeholder=" Digite uma senha para o aluno" />
+					</div>
+				</div>
+
+				<center>
+					<h:commandButton value="Cadastrar" styleClass="btnCadastrar" action="#{cadastraAlunoController.valida}" />
+				</center>
+			</h:form>
+		</div>
+
+	</ui:define>
+
+</ui:composition>

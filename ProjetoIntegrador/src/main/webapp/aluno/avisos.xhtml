@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="/layout/layout.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+
+	<ui:define name="principal">
+
+		<div class="conteudo">
+			<center>
+				<h1>Avisos</h1>
+			</center>
+			<f:event type="preRenderView"
+				listener="#{visualizarAvisosController.carregaAvisos}" />
+			<h:dataTable value="#{visualizarAvisosController.mensagens}"
+				var="mensagem" styleClass="tabelaAvisos" headerClass="order-table-header"
+				rowClasses="order-table-odd-row,order-table-even-row">
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Aviso</f:facet>
+					<!-- row record -->
+	    				#{mensagem.aviso}
+	    			</h:column>
+
+				<h:column>
+					<f:facet name="header">Remetente</f:facet>
+	    				#{mensagem.remetente}
+	    			</h:column>
+			</h:dataTable>
+		</div>
+
+	</ui:define>
+
+</ui:composition>

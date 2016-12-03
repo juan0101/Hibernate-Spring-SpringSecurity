@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<div class="profile-sidebar">
+		<!-- SIDEBAR Foto Funcionario -->
+		<div class="fotoFuncionario">
+			<img src="../resources/img/user.png" class="img-responsive" alt="" />
+		</div>
+		<!-- SIDEBAR Dados FUNCIONARIO -->
+		<div class="dadosFuncionario">
+			<div class="dadosFuncionario-name">
+				<h:outputLabel id="nomeFuncionario" value="#{carregaUsuarioLogadoController.nomeUsuarioTela}" />
+			</div>
+			<!-- <div class="dadosFuncionario-documento">
+				<h:outputLabel id="documentoFuncionario" value="Número" />
+			</div> -->
+		</div>
+		<!-- SIDEBAR MENU -->
+		<div class="menuSidebar">
+			<h:form id="mainMenu">
+				<ul class="nav">
+					<li><h:commandLink id="home"
+							value="Home" action="/index?faces-redirect=true" immediate="true">
+							<br />
+						</h:commandLink></li>
+
+					<li><h:commandLink id="desempenho"
+							value="Desempenho" action="/aluno/desempenho?faces-redirect=true"
+							immediate="true" rendered="#{request.isUserInRole('ROLE_ALUNO')}">
+							<br />
+						</h:commandLink></li>
+
+					<li><h:commandLink id="historico"
+							value="Historico" action="/aluno/historico?faces-redirect=true"
+							immediate="true" rendered="#{request.isUserInRole('ROLE_ALUNO')}">
+							<br />
+						</h:commandLink></li>
+
+					<li><h:commandLink id="disciplinas"
+							value="Disciplinas"
+							action="/aluno/disciplinas?faces-redirect=true" immediate="true"
+							rendered="#{request.isUserInRole('ROLE_ALUNO')}">
+							<br />
+						</h:commandLink></li>
+
+					<li><h:commandLink id="ocorrencia"
+							value="Ocorrencias"
+							action="/aluno/ocorrencias?faces-redirect=true" immediate="true"
+							rendered="#{request.isUserInRole('ROLE_ALUNO')}">
+							<br />
+						</h:commandLink></li>
+
+					<li><h:commandLink  id="aviso"
+							value="Avisos" action="/aluno/avisos?faces-redirect=true"
+							immediate="true" rendered="#{request.isUserInRole('ROLE_ALUNO')}">
+							<br />
+						</h:commandLink></li>
+
+					<li><h:commandLink  id="cadastrarAluno"
+							value="Cadastrar Aluno"
+							action="/coordenacao/cadastroAluno?faces-redirect=true"
+							immediate="true"
+							rendered="#{request.isUserInRole('ROLE_COORDENACAO')}">
+							<br />
+						</h:commandLink></li>
+
+					<li><h:commandLink  id="cadastrarProfessor" value="Cadastrar Professor"
+							action="/coordenacao/cadastroProfessor?faces-redirect=true"
+							immediate="true"
+							rendered="#{request.isUserInRole('ROLE_COORDENACAO')}">
+							<br />
+						</h:commandLink></li>
+
+					<li><h:commandLink  id="cadastrarFuncionario" value="Cadastrar Funcionario"
+							action="/coordenacao/cadastroFuncionario?faces-redirect=true"
+							immediate="true"
+							rendered="#{request.isUserInRole('ROLE_COORDENACAO')}">
+							<br />
+						</h:commandLink></li>
+
+					<li><h:commandLink  id="vincularProfessor" value="Vincular Professor"
+							action="/coordenacao/vincularProfessor?faces-redirect=true"
+							immediate="true"
+							rendered="#{request.isUserInRole('ROLE_COORDENACAO')}">
+							<br />
+						</h:commandLink></li>
+
+					<li><h:commandLink  id="visualizarProfessores" value="Visualizar Professores"
+							action="/coordenacao/visualizarProfessor?faces-redirect=true"
+							immediate="true"
+							rendered="#{request.isUserInRole('ROLE_COORDENACAO')}">
+							<br />
+						</h:commandLink></li>
+
+					<li><h:commandLink id="visualizarAlunos"
+							value="Visualizar Alunos"
+							action="/coordenacao/visualizarAluno?faces-redirect=true"
+							immediate="true"
+							rendered="#{request.isUserInRole('ROLE_COORDENACAO')}">
+							<br />
+						</h:commandLink></li>
+
+					<li><h:commandLink id="lancarNotas"
+							value="Lançar notas/faltas"
+							action="/professor/lancarNotas?faces-redirect=true"
+							immediate="true"
+							rendered="#{request.isUserInRole('ROLE_PROFESSOR')}">
+							<br />
+						</h:commandLink></li>
+
+					<li><h:commandLink id="enviarMensagem"
+							value="Enviar Mensagem"
+							action="/professor/enviarMensagem?faces-redirect=true"
+							immediate="true"
+							rendered="#{request.isUserInRole('ROLE_PROFESSOR')}">
+							<br />
+						</h:commandLink></li>
+				</ul>
+			</h:form>
+		</div>
+		<!-- Fim sidebar MENU -->
+	</div>
+
+</ui:composition>

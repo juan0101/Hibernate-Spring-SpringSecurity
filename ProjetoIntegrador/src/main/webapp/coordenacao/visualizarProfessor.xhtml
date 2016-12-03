@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="/layout/layout.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+
+	<ui:define name="principal">
+
+		<div class="conteudo">
+			<center>
+				<h1>Visualizar Professores</h1>
+			</center>
+			<f:event type="preRenderView"
+				listener="#{visualizarProfessorController.carregaProfessores}" />
+			<h:dataTable value="#{visualizarProfessorController.professores}"
+				var="prof" styleClass="professor" headerClass="order-table-header"
+				rowClasses="order-table-odd-row,order-table-even-row">
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Nome</f:facet>
+					<!-- row record -->
+	    				#{prof.nome}
+	    			</h:column>
+
+				<h:column>
+					<f:facet name="header">Registro</f:facet>
+	    				#{prof.registro}
+	    			</h:column>
+
+				<h:column>
+					<f:facet name="header">Telefone</f:facet>
+	    				#{prof.contato}
+	    			</h:column>
+
+				<h:column>
+					<f:facet name="header">Materia</f:facet>
+	    				#{prof.materias}
+	    			</h:column>
+			</h:dataTable>
+		</div>
+	</ui:define>
+
+</ui:composition>

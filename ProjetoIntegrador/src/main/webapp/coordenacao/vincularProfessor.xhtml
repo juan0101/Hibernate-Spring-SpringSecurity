@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="/layout/layout.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+
+	<ui:define name="principal">
+
+		<div class="conteudo">
+
+			<center>
+				<h1>Vincular professor à disciplina</h1>
+			</center>
+			<br />
+			<h:form id="formVincularProfessor">
+
+				<div class="form-group row">
+					<!-- A linha 19 roda o método que alimenta as listas de professores e materias -->
+					<f:event type="preRenderView"
+						listener="#{vincularProfessorController.carregaProfessoresMaterias}" />
+					<!-- CONTRUÇÃO DA TABELA COM AS MATERIAS PARA SELEÇÃO -->
+					<h:selectManyCheckbox layout="pageDirection"
+						value="#{vincularProfessorController.materiasSelecionadas}">
+						<f:selectItems
+							value="#{vincularProfessorController.selecaoMaterias}" />
+						<br />
+					</h:selectManyCheckbox>
+				</div>
+
+				<div class="form-group row" style="padding-top: 20px;">
+					<label for="funcionarioTelefone" class="col-xs-2 col-form-label">Professores:</label>
+					<div class="col-xs-9">
+						<h:selectOneMenu styleClass="inputSelect"
+								value="#{vincularProfessorController.professorSelecionado}">
+								<f:selectItems
+									value="#{vincularProfessorController.selecaoProfessores}" />
+							</h:selectOneMenu>
+					</div>
+				</div>
+
+				<center>
+					<h:commandButton value="Vincular" styleClass="btnCadastrar"
+						action="#{vincularProfessorController.salvar}" />
+				</center>
+			</h:form>
+		</div>
+
+	</ui:define>
+
+</ui:composition>

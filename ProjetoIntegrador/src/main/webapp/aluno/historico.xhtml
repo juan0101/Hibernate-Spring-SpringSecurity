@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="/layout/layout.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+
+	<ui:define name="principal">
+
+
+		<!--Tabela JSF-->
+		<h:dataTable value="#{HistoricoAlunoController.historico}" var="hist"
+			styleClass="order-table" headerClass="order-table-header"
+			rowClasses="order-table-odd-row,order-table-even-row">
+
+			<h:column>
+				<f:facet name="header">Disciplina</f:facet>
+	    				#{hist.materia}
+	    			</h:column>
+
+			<h:column>
+				<f:facet name="header">Horário</f:facet>
+	    				#{hist.ano}
+	    			</h:column>
+
+			<h:column>
+				<f:facet name="header">Faltas</f:facet>
+	    				#{hist.nota}
+	    			</h:column>
+
+			<h:column>
+				<f:facet name="header">Faltas</f:facet>
+	    				#{hist.faltas}
+	    			</h:column>
+
+			<h:column>
+				<f:facet name="header">Status</f:facet>
+	    				#{hist.status}
+	    			</h:column>
+
+		</h:dataTable>
+		<!-- Fim -->
+		<div class="conteudo">
+			<table class="table table-hover table-bordered" id="tabelaHistorico">
+				<thead>
+					<tr>
+						<th class="hidden-xs">#</th>
+						<th>Disciplina</th>
+						<th class="hidden-xs">Ano</th>
+						<th>Nota Final</th>
+						<th class="hidden-xs">Faltas</th>
+						<th class="hidden-xs">Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="hidden-xs">1</td>
+						<td>Matemática</td>
+						<td class="hidden-xs">2016</td>
+						<td>8.5</td>
+						<td class="hidden-xs">18</td>
+						<td class="hidden-xs" id="aprovado">Aprovado</td>
+					</tr>
+					<tr>
+						<td class="hidden-xs">2</td>
+						<td>Geografia</td>
+						<td class="hidden-xs">2016</td>
+						<td>4.0</td>
+						<td class="hidden-xs">32</td>
+						<td class="hidden-xs" id="reprovado">Reprovado</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</ui:define>
+
+</ui:composition>

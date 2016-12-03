@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="/layout/layout.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+
+	<ui:define name="principal">
+
+
+		<div class="conteudo">
+
+			<center>
+				<h1>Lançar Nota</h1>
+			</center>
+			<br />
+
+			<div class="form-group row">
+				<label class="col-xs-2 col-form-label">Série</label>
+				<div class="col-xs-10">
+					<h:selectOneMenu value="#">
+						<f:selectItem itemValue="null" itemLabel="Selecione uma série" />
+						<f:selectItem itemValue="6° Ano / 5ª Série - Ensino Fundamental"
+							itemLabel="6° Ano / 5ª Série - Ensino Fundamental" />
+						<f:selectItem itemValue="7° Ano / 6ª Série - Ensino Fundamental"
+							itemLabel="7° Ano / 6ª Série - Ensino Fundamental" />
+						<f:selectItem itemValue="8° Ano / 7ª Série - Ensino Fundamental"
+							itemLabel="8° Ano / 7ª Série - Ensino Fundamental" />
+						<f:selectItem itemValue="9° Ano / 8ª Série - Ensino Fundamental"
+							itemLabel="9° Ano / 8ª Série - Ensino Fundamental" />
+						<f:selectItem itemValue="1° Ano - Ensino Médio"
+							itemLabel="1° Ano - Ensino Médio" />
+						<f:selectItem itemValue="2° Ano - Ensino Médio"
+							itemLabel="2° Ano - Ensino Médio" />
+						<f:selectItem itemValue="3° Ano - Ensino Médio"
+							itemLabel="3° Ano - Ensino Médio" />
+					</h:selectOneMenu>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-xs-2 col-form-label">Turma</label>
+				<div class="col-xs-10">
+					<h:selectOneMenu value="#">
+						<f:selectItem itemValue="null" itemLabel="Selecione uma turma" />
+						<f:selectItem itemValue="A" itemLabel="A" />
+						<f:selectItem itemValue="B" itemLabel="B" />
+						<f:selectItem itemValue="C" itemLabel="C" />
+						<f:selectItem itemValue="D" itemLabel="D" />
+					</h:selectOneMenu>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-xs-2 col-form-label">Horário de estudo</label>
+				<div class="col-xs-10">
+
+					<h:selectOneMenu
+						value="#">
+						<f:selectItem itemValue="null" itemLabel="Selecione o horário" />
+						<f:selectItem itemValue="Matutino" itemLabel="Matutino" />
+						<f:selectItem itemValue="Vespertino" itemLabel="Vespertino" />
+						<f:selectItem itemValue="Noturno" itemLabel="Noturno" />
+						<f:selectItem itemValue="Integral" itemLabel="Integral" />
+					</h:selectOneMenu>
+
+				</div>
+			</div>
+			<center>
+				<h:commandButton value="Buscar Alunos" id="btnCadastrar"
+					action="#" />
+			</center>
+
+			<f:view>
+				<h:form>
+					<h:dataTable value="#" var="alu">
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Nome" />
+							</f:facet>
+							<h:inputText value="#" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Nota Final" />
+							</f:facet>
+							<h:inputText value="#" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Faltas" />
+							</f:facet>
+							<h:inputText value="#" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:panelGroup>
+									<h:commandButton value="Editar" action="" />
+									<h:commandButton value="Salvar"
+										action="#" />
+								</h:panelGroup>
+							</f:facet>
+						</h:column>
+					</h:dataTable>
+				</h:form>
+			</f:view>
+
+		</div>
+
+	</ui:define>
+</ui:composition>

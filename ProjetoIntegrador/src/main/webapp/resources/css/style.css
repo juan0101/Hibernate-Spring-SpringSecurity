@@ -1,0 +1,399 @@
+
+body {
+    padding-top: 70px;
+	/*background-color:rgba(0, 0, 0, 0.81);*/
+	background-color:rgba(0, 0, 0, 0.11);
+	color:rgba(0, 0, 0, 0.81);
+	font-family:Arial Black;
+}
+
+/*Fundo navbar*/
+.navbar {
+	background-color:#006997;
+	height: 90px;
+}
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+/*Navbar-botoes quando está com o mouse em cima*/
+.navbar-inverse .navbar-nav>li>a:hover { 
+    color: #FF710D;
+}
+
+/*Letras navbar*/
+
+.logout{
+	color:white;
+}
+.logout:hover{
+	color:#FF710D;
+}
+
+.navbar-inverse .navbar-nav>li>a { 
+    color: white;
+	font-size:15px;
+}
+
+/*Menu > navbar responsiva*/
+.navbar-inverse .navbar-toggle{
+	border:none
+}
+
+
+#logoNavbar{
+	width: 140px;
+	height:50px;
+}
+
+/*Footer*/
+footer{
+	margin-top: 20px;
+	background-color:#006997;
+	color:white;
+	padding:15px;
+}
+
+#logoFooter{
+	width: 120px;
+	height:40px;
+}
+
+
+.principal {
+  padding: 20px 0;
+}
+
+/* Sidebar */
+.profile-sidebar {
+  padding: 20px 0 10px 0;
+  background: #fff;
+  border:2px rgb(206, 205, 205) solid;
+  border-radius: 5px;
+}
+
+/*Img user*/
+.fotoUser img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+/*Dados user*/
+.dadosUser {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*Nome user*/
+.dadosUser-name {
+  color: rgba(0, 0, 0, 0.81);
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+/*RA user*/
+.dadosUser-ra {
+  color: #5b9bd1;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+/*Menu sidebar*/
+.menuSidebar {
+  margin-top: 30px;
+}
+
+.menuSidebar ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.menuSidebar ul li:last-child {
+  border-bottom: none;
+}
+
+.menuSidebar ul li a {
+  /*color: #93a3b5;*/
+  color:rgba(0, 0, 0, 0.81);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.menuSidebar ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.menuSidebar ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
+
+.menuSidebar ul li.active {
+  border-bottom: none;
+}
+
+.menuSidebar ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+
+/*Img funcionario*/
+.fotoFuncionario img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+/*Dados funcionario*/
+.dadosFuncionario {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*Nome funcionario*/
+.dadosFuncionario-name {
+  color: rgba(0, 0, 0, 0.81);
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+/*DOCUMENTO funcionario*/
+.dadosFuncionario-documento {
+  color: #5b9bd1;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+#divLogin{
+	min-height:462px;
+	padding-top:20px;
+}
+/* Div conteúdo */
+.conteudo {
+  padding: 20px;
+  background: white;
+  min-height: 555px;
+  color:black;
+  border:2px rgb(206, 205, 205) solid;
+  border-radius: 5px;
+}
+
+/*Disciplinas*/
+#tabelaDisciplinas{
+	text-align:center;
+}
+
+#tabelaDisciplinas>thead{
+	background-color: #006997;
+	color:white;
+}
+
+#tabelaDisciplinas>tbody>tr:hover{
+	background-color:#C9DDE5;	
+}
+
+/*Histórico*/
+#tabelaHistorico{
+	text-align:center;
+}
+
+#tabelaHistorico>thead{
+	background-color: #006997;
+	color:white;
+}
+
+#aprovado{
+	background-color:#82E55C;
+	
+}
+
+#reprovado{
+	background-color:#FF3430;	
+}
+
+/*tabela Ocorrencias*/
+#tituloOcorrencia{
+	color:#006997;
+}
+
+.btnCadastrar{
+	width:200px;
+	height:50px;
+	font-size:15px;
+	color:white;
+	background-color: #0b8a0e;
+	border-radius: 5px;
+	border:1px rgb(206, 205, 205) solid;
+	margin-top:20px;
+}
+
+/*tabela Professores*/
+#tabelaProfessores{
+	text-align:center;
+	margin-top:20px;
+}
+
+#tabelaProfessores>thead{
+	background-color: #006997;
+	color:white;
+}
+
+/*tabela Lançar Notas/Faltas*/
+#tabelaLancarNota{
+	text-align:center;
+	margin-top:20px;
+}
+
+#tabelaLancarNota>thead{
+	background-color: #006997;
+	color:white;
+}
+
+#inputNotas{
+	width:60px;
+}
+
+#inputPesquisaProfessor{
+	width:200px;
+}
+
+#btnPesquisaProfessor{
+	margin-top:10px;
+	width:200px;
+}
+
+
+
+table.professor {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+ 
+table.professor th,
+table.professor td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid black;
+    font-family: Arial Black;
+}
+
+table.professor th{
+	background-color:#006997;
+	color:white;
+}
+
+table.aluno {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+ 
+table.aluno th,
+table.aluno td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid black;
+    font-family: Arial Black;
+}
+
+table.aluno th{
+	background-color:#006997;
+	color:white;
+}
+
+table.tabelaAvisos {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+ 
+table.tabelaAvisos th,
+table.tabelaAvisos td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid black;
+    font-family: Arial Black;
+}
+
+table.tabelaAvisos th{
+	background-color:#006997;
+	color:white;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+	
+	#btnCadastrar{
+	width:200px;
+	height:50px;
+	font-size:17px;
+	}
+	
+	#logoNavbar{
+	width: 140px;
+	height:60px;
+	}
+	
+	#inputPesquisaProfessor{
+		width:230px;
+	}
+	
+	#btnPesquisaProfessor{
+		margin-top:0px;
+		width:40px;
+	}
+}
+
+.inputText{
+	border-radius: 5px;
+	border:1px rgb(206, 205, 205) solid;
+	width: 600px;
+	height: 30px;
+}
+
+.inputSelect{
+	border-radius: 5px;
+	border:1px rgb(206, 205, 205) solid;
+	height: 40px;
+}
+
+.inputLogin{
+	border-radius: 5px;
+	border:1px rgb(206, 205, 205) solid;
+	height: 30px;
+	margin-top:20px;
+	width: 300px;
+}
+
+.linkMenu{
+	color:rgba(0, 0, 0, 0.81);
+	padding-left:20px;
+}
+
+.areaMensagem{
+	width:700px;
+	height:150px;
+}
+
